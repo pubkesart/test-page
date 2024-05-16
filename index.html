@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en-us" dir="ltr">
 
 
@@ -111,9 +112,9 @@ atOptions = {
    </article>
  </a>
 </nav>
- 
- 
- 
+
+
+
   <script defer="" src="https://reizones.github.io/renachan/js/katex.js"></script>
 
 
@@ -121,8 +122,32 @@ atOptions = {
 
 
 <script src="https://reizones.github.io/renachan/js/core.min.js"></script>
+    <script>
+        function setTheme(theme) {
+            if (theme === 'system') {
+                const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                document.body.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                    document.body.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+                });
+            } else {
+                document.body.setAttribute('data-theme', theme);
+            }
+        }
 
-  
+        function toggleThemeSwitcher() {
+            const themeSwitcher = document.getElementById('themeSwitcher');
+            themeSwitcher.style.display = themeSwitcher.style.display === 'block' ? 'none' : 'block';
+        }
+
+        document.addEventListener('click', function(event) {
+            const themeSwitcher = document.getElementById('themeSwitcher');
+            const settingsIcon = document.querySelector('.settings-icon');
+            if (themeSwitcher.style.display === 'block' && !themeSwitcher.contains(event.target) && !settingsIcon.contains(event.target)) {
+                themeSwitcher.style.display = 'none';
+            }
+        })
+    </script>
 
 <script async="" type="text/javascript" src="https://s4.histats.com/stats/0.php?4193693&amp;@f16&amp;@g0&amp;@h8&amp;@i1&amp;@j1658503740929&amp;@k6151&amp;@l8&amp;@m33%2B%20Genshin%20impact%20diona%20weapon%20reddit%20information%20%C2%B7%20rena&amp;@n0&amp;@ohttps%3A%2F%2Fyandex.ru%2Fimages%2Fsearch%3Fcbir_page%3Dsimilar%26pos%3D10%26url%3Dhttps%253A%252F%252Favatars.mds.yandex.net%252Fget-images-cbir%252F1778895%252FEvZkHi_ySZ9BKdXUuda19w6809%252Forig%26img_url%3Dhttps%253A%252F%252Fpbs.twimg.com%252Fmedia%252FFBs2y7CVkAEFdwz.jpg%26cbir_id%3D1778895%252FEvZkHi_ySZ9BKdXUuda19w6809%26rpt%3Dimageview&amp;@q0&amp;@r0&amp;@s0&amp;@tru&amp;@u1536&amp;@b1:53593702&amp;@b3:1658503741&amp;@b4:js15_as.js&amp;@b5:420&amp;@a-_0.2.1&amp;@vhttps%3A%2F%2Freizones.github.io%2Frenachan%2Fpost%2Fgenshin-impact-diona-weapon-reddit%2F&amp;@w"></script>
 </body></html>
