@@ -3,14 +3,212 @@
 
 
  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="text/javascript" async="" src="//s10.histats.com/js15_as.js"></script><script src="//addresseepaper.com/sfp.js"></script><script type="text/javascript" src="//limitationvolleyballdejected.com/1f/c5/8b/1fc58bad10cb348655d2400ad1777983.js"></script><script src="//creepingbrings.com/sfp.js"></script>
   <title>Pubkesart | Official site</title>
+  <style>
+        :root {
+            --bg-color-light: #ffffff;
+            --text-color-light: #000000;
+            --bg-color-dark: #121212;
+            --text-color-dark: #ffffff;
+            --accent-color: #007BFF;
+        }
+
+        [data-theme="light"] {
+            background-color: var(--bg-color-light);
+            color: var(--text-color-light);
+        }
+
+        [data-theme="dark"] {
+            background-color: var(--bg-color-dark);
+            color: var(--text-color-dark);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .theme-switcher {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            display: none;
+            background: var(--bg-color-light);
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+
+        .theme-switcher button {
+            background-color: var(--accent-color);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .settings-icon {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        .settings-icon img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .gallery-section {
+            margin-bottom: 40px;
+        }
+
+        .gallery {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery img {
+            max-width: 200px;
+            height: auto;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border 0.3s, transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        .gallery img:hover {
+            border: 2px solid var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel img {
+            margin-right: 10px;
+        }
+
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .carousel-buttons button {
+            background-color: var(--accent-color);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            pointer-events: all;
+            display: none; /* Initially hidden */
+        }
+
+        .full-image {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            animation: fadeIn 0.5s;
+            cursor: pointer;
+        }
+
+        .full-image img {
+            max-width: 90%;
+            max-height: 70%;
+            cursor: default;
+        }
+
+        .full-image .description {
+            color: #fff;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .full-image .open-original {
+            margin-top: 10px;
+            background-color: var(--accent-color);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .full-image-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .full-image-buttons button {
+            background-color: var(--accent-color);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--accent-color);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
  </head>
 
 
 
 
-<body class="single-body" style="padding-right: 0px;"><center><script type="text/javascript">
+<body data-theme="system" class="single-body" style="padding-right: 0px;"><center><script type="text/javascript">
 atOptions = {
 'key' : '7ca18f4b8a348c4d7a09c0e3f01fe2e6',
 'format' : 'iframe',
